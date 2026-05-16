@@ -95,7 +95,7 @@ public class UnitTest1
     }
 
     [TestMethod]
-    [ExpectedException(typeof(Stateless.StateMachine<BugState, BugTrigger>.InvalidStateTransitionException))]
+    [ExpectedException(typeof(System.InvalidOperationException))]
     public void CannotFixWithoutTriaged()
     {
         var bug = new Bug();
@@ -104,7 +104,7 @@ public class UnitTest1
     }
 
     [TestMethod]
-    [ExpectedException(typeof(Stateless.StateMachine<BugState, BugTrigger>.InvalidStateTransitionException))]
+    [ExpectedException(typeof(System.InvalidOperationException))]
     public void CannotCloseWithoutFix()
     {
         var bug = new Bug();
